@@ -73,6 +73,7 @@ body{
     box-shadow: 0px 4px 4px 0px #697FB40F;
     background-color: var(--white);
     position: sticky;
+    z-index: 10;
     top: 0;
 }
 
@@ -111,6 +112,7 @@ body{
 .hero{
     margin-top: 240px;
     font-family: "Space Grotesk", sans-serif;
+    position: relative;
 }
 
 .hero .title{
@@ -124,6 +126,13 @@ body{
     margin: 16px 0;
     color: var(--gray);
     font-size: 20px;
+}
+
+.heroImg{
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 35%;
 }
 
 
