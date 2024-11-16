@@ -1,0 +1,175 @@
+/* Variables */
+
+:root {
+    --gray: #8D8A95;
+    --lightGray: #ECEBEC;
+    --blue:#697FB4;
+    --white : #fff;
+    --cardGray: #F0F2F8;
+
+    --btnRadius: 12px;
+  }
+
+
+
+/* Common */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Ubuntu", serif;
+}
+
+.narrowContainer{
+    width: 62% !important;
+    margin: 0 auto;
+}
+
+.mainBtn{
+    outline: none;
+    background-color: transparent;
+    padding: 12px 40px;
+    border-radius: var(--btnRadius);
+    border: none;
+    font-weight: 400;
+    width: fit-content;
+}
+
+.blueBtn{
+    background-color: var(--blue);
+    color: var(--white)
+}
+
+.grayBorderBtn{
+    border: 1px solid var(--lightGray);
+    color: var(--blue);
+}
+
+.blueBorderBtn{
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+.rounded{
+    border-radius: 80px !important;
+}
+
+.halfRounded{
+    border-radius: 80px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+/* Navbar */
+
+
+.navbar{
+    box-shadow: 0px 4px 4px 0px #697FB40F;
+}
+
+.nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo{
+    cursor: pointer;
+}
+
+.navbar .navItems{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.navbar .navItems a{
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.navbar .loginActions{
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Hero */
+
+.hero{
+    margin-top: 240px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.hero .title{
+    font-size: 72px;
+    font-weight: 700;
+    cursor: default;
+    line-height: 78px;
+}
+
+.hero .subtitle{
+    margin: 16px 0;
+    color: var(--gray);
+    font-size: 20px;
+}
+
+
+/* About */
+
+.about{
+    font-family: "Space Grotesk", sans-serif;
+    margin-top: 250px;
+}
+
+.aboutContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .title{
+    font-size: 64px;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.about .subtitle{
+    margin: 16px 0;
+    color: var(--gray);
+    font-size: 18px;
+}
+
+.cardContainer{
+    display: flex;
+}
+
+.cardContainer .top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardContainer .top .title{
+    width: 55%;
+    font-size: 24px;
+    color: black;
+    font-weight: 500;
+
+}
+
+.card{
+    border: 0;
+    padding: 72px;
+    background-color: var(--cardGray);
+    flex: 1;
+}
+
