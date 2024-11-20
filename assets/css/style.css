@@ -3,34 +3,34 @@
 :root {
     --gray: #8D8A95;
     --lightGray: #ECEBEC;
-    --blue:#697FB4;
-    --white : #fff;
+    --blue: #697FB4;
+    --white: #fff;
     --cardGray: #F0F2F8;
 
     --btnRadius: 12px;
-  }
+}
 
 
 
 /* Common */
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Ubuntu", serif;
 }
 
-.narrowContainer{
+.narrowContainer {
     width: 62% !important;
     margin: 0 auto;
 }
 
-.mainBtn{
+.mainBtn {
     outline: none;
     background-color: transparent;
     padding: 12px 40px;
@@ -40,36 +40,42 @@ body{
     width: fit-content;
 }
 
-.blueBtn{
+.blueBtn {
     background-color: var(--blue);
     color: var(--white)
 }
 
-.grayBorderBtn{
+.grayBorderBtn {
     border: 1px solid var(--lightGray);
     color: var(--blue);
 }
 
-.blueBorderBtn{
+.blueBorderBtn {
     border: 1px solid var(--blue);
     color: var(--blue);
 }
 
-.rounded{
+.rounded {
     border-radius: 80px !important;
 }
 
-.halfRounded{
+.halfRounded {
     border-radius: 80px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.halfRoundedReverse {
+    border-radius: 80px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 
 /* Navbar */
 
 
-.navbar{
+.navbar {
     box-shadow: 0px 4px 4px 0px #697FB40F;
     background-color: var(--white);
     position: sticky;
@@ -77,7 +83,7 @@ body{
     top: 0;
 }
 
-.nav{
+.nav {
     height: 100px;
     width: 100%;
     display: flex;
@@ -85,23 +91,23 @@ body{
     align-items: center;
 }
 
-.navbar .logo{
+.navbar .logo {
     cursor: pointer;
 }
 
-.navbar .navItems{
+.navbar .navItems {
     width: 30%;
     display: flex;
     justify-content: space-between;
     font-weight: 400;
 }
 
-.navbar .navItems a{
+.navbar .navItems a {
     color: var(--gray);
     text-decoration: none;
 }
 
-.navbar .loginActions{
+.navbar .loginActions {
     display: flex;
     gap: 10px;
 }
@@ -109,26 +115,26 @@ body{
 
 /* Hero */
 
-.hero{
+.hero {
     margin-top: 240px;
     font-family: "Space Grotesk", sans-serif;
     position: relative;
 }
 
-.hero .title{
+.hero .title {
     font-size: 72px;
     font-weight: 700;
     cursor: default;
     line-height: 78px;
 }
 
-.hero .subtitle{
+.hero .subtitle {
     margin: 16px 0;
     color: var(--gray);
     font-size: 20px;
 }
 
-.heroImg{
+.heroImg {
     position: absolute;
     right: 0;
     top: -50px;
@@ -138,29 +144,29 @@ body{
 
 /* About */
 
-.about{
+.about {
     font-family: "Space Grotesk", sans-serif;
     margin-top: 250px;
 }
 
-.aboutContainer{
+.aboutContainer {
     display: flex;
     flex-wrap: wrap;
 }
 
-.about .title{
+.about .title {
     font-size: 64px;
     color: var(--blue);
     font-weight: 700;
 }
 
-.about .subtitle{
+.about .subtitle {
     margin: 16px 0;
     color: var(--gray);
     font-size: 18px;
 }
 
-.cardContainer{
+.cardContainer {
     display: flex;
 }
 
@@ -170,7 +176,7 @@ body{
     align-items: center;
 }
 
-.cardContainer .top .title{
+.cardContainer .top .title {
     width: 55%;
     font-size: 24px;
     color: black;
@@ -178,10 +184,176 @@ body{
 
 }
 
-.card{
+.card {
     border: 0;
     padding: 72px;
     background-color: var(--cardGray);
     flex: 1;
 }
 
+
+/* Info section */
+
+.infoContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.infoContainer>div {
+    margin: 100px 0;
+}
+
+.infoContainer .card {
+    width: 486px;
+    height: 680px;
+    position: relative;
+    padding: 0;
+}
+
+.infoContainer .card img {
+    width: 373px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.infoContainer .infoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    text-align: right;
+    gap: 32px;
+}
+
+.infoContainer .infoText.second {
+    align-items: start;
+    text-align: start;
+}
+
+.infoContainer .infoText .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--blue);
+    width: 50%;
+}
+
+.infoContainer .infoText .subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gray);
+    width: 65%;
+    line-height: 30px;
+}
+
+.infoContainer .col-6:last-child {
+    display: flex;
+    justify-content: end;
+}
+
+.infoContainer .col-6:last-child .card {
+    flex: none;
+}
+
+
+/* Download */
+
+.download .card {
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    flex-direction: row;
+    padding: 80px 0;
+}
+
+.download .card .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 42px;
+}
+
+.download .card .subtitle {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gray);
+    line-height: 26px;
+}
+
+.downloadBtn {
+    cursor: pointer;
+}
+
+
+/* FAQ */
+
+.FAQ {
+    margin-top: 120px;
+    box-shadow: 4px 4px 24px 0px #1F1F1F08;
+    box-shadow: -4px -4px 24px 0px #00000008;
+    padding: 80px;
+}
+
+.faqContainer .title {
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--blue);
+}
+
+.accordion {
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-item p{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #eaeaea;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #fff;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+}
+
+.accordion-content.open {
+    max-height: 200px;
+    padding: 15px;
+}
