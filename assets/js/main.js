@@ -14,4 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
         content.classList.toggle("open");
       });
     });
+
+
+    const loginBtn = document.getElementById("loginBtn");
+
+      loginBtn.addEventListener("click", () => {
+  
+        const loginPopup = document.getElementById("popupParent");
+        const body = document.getElementById('body');
+        window.scrollTo(0, 0);
+
+        loginPopup.classList.toggle('d-none');
+        body.classList.toggle('overflow-hidden')
+        
+
+      });
   });
