@@ -71,6 +71,42 @@ body {
     border-bottom-right-radius: 0;
 }
 
+.mainInput {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    position: relative;
+  }
+  
+  .mainInput input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .mainInput label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #0000004D
+  }
+  
+  .mainInput :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+  
 
 /* Navbar */
 
@@ -424,12 +460,12 @@ body {
 /* Popup */
 
 .popupParent{
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.404);
+    background-color: rgba(0, 0, 0, 0.719);
     z-index: 11;
 }
 
@@ -437,8 +473,42 @@ body {
     position: absolute;
     background-color: var(--white);
     border-radius: 40px;
-    padding: 53px;
-    top: 50%;
-    left: 50%;
+    padding: 53px 150px;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.popupCloseBtn{
+    position: absolute;
+    top: 53px;
+    right: 60px;
+    cursor: pointer;
+}
+
+.popup .title{
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+}
+
+.popup .subtitle{
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 24px;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.popup button{
+    width: 300px;
+}
+
+.customerInput{
+    margin-top: 96px;
+    width: 300px;
 }
