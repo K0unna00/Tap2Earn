@@ -6,6 +6,7 @@
     --blue: #697FB4;
     --white: #fff;
     --cardGray: #F0F2F8;
+    --red: #F34141;
 
     --btnRadius: 12px;
 }
@@ -30,6 +31,11 @@ body {
     margin: 0 auto;
 }
 
+.extraNarrowContainer{
+    width: 50% !important;
+    margin: 0 auto;
+}
+
 .mainBtn {
     outline: none;
     background-color: transparent;
@@ -48,6 +54,11 @@ body {
 .grayBorderBtn {
     border: 1px solid var(--lightGray);
     color: var(--blue);
+}
+
+.grayBtn {
+    border: 1px solid var(--lightGray);
+    color: var(--gray);
 }
 
 .blueBorderBtn {
@@ -73,21 +84,21 @@ body {
 
 .mainInput {
     font-family: 'Segoe UI', sans-serif;
-    margin: 1em 0 1em 0;
     position: relative;
-  }
-  
-  .mainInput input {
-    font-size: 100%;
+}
+
+.mainInput input {
+    font-size: 16px;
     padding: 0.8em;
+    padding-top: 1em;
     outline: none;
-    border: 2px solid rgb(200, 200, 200);
+    border: 1px solid var(--lightGray);
     background-color: transparent;
     border-radius: 10px;
     width: 100%;
-  }
-  
-  .mainInput label {
+}
+
+.mainInput label {
     font-size: 100%;
     position: absolute;
     left: 0;
@@ -96,17 +107,16 @@ body {
     pointer-events: none;
     transition: all 0.3s ease;
     color: #0000004D
-  }
-  
-  .mainInput :is(input:focus, input:valid)~label {
-    transform: translateY(-50%) scale(.9);
+}
+
+.mainInput :is(input:focus, input:valid)~label {
+    transform: translateY(-18%) scale(.8    );
     margin: 0em;
-    margin-left: 1.3em;
+    margin-left: 0.3em;
     padding: 0.4em;
-    background-color: var(--white);
     border-radius: 10px;
-  }
-  
+}
+
 
 /* Navbar */
 
@@ -355,7 +365,7 @@ body {
     border-bottom: none;
 }
 
-.accordion-item p{
+.accordion-item p {
     font-weight: 400;
     font-size: 18px;
 }
@@ -396,42 +406,42 @@ body {
 
 /* Contact */
 
-.contact .card{
+.contact .card {
     padding: 96px 0;
 }
 
-.contactContainer{
+.contactContainer {
     display: flex;
     justify-content: space-between;
 }
 
 .contactContainer .left,
-.contactContainer .right{
+.contactContainer .right {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.contactContainer .left .title{
+.contactContainer .left .title {
     font-weight: 700;
     font-size: 36px;
     color: var(--blue);
 }
 
-.contactContainer .left .subtitle{
+.contactContainer .left .subtitle {
     font-weight: 400;
     font-size: 18px;
     color: var(--gray);
     line-height: 26px;
 }
 
-.contactContainer .right .title{
+.contactContainer .right .title {
     font-weight: 400;
     font-size: 18px;
-    color:  #c0c0c0;
+    color: #c0c0c0;
 }
 
-.contactContainer .right .subtitle{
+.contactContainer .right .subtitle {
     font-weight: 500;
     font-size: 20px;
     color: #515151
@@ -439,12 +449,12 @@ body {
 
 /* Footer */
 
-.footer{
+.footer {
     margin-top: 120px;
     background-color: var(--cardGray);
 }
 
-.copyright{
+.copyright {
     font-size: 18px;
     width: 100%;
     text-align: center;
@@ -452,14 +462,14 @@ body {
     color: var(--gray);
 }
 
-.copyright span{
+.copyright span {
     color: var(--blue);
     font-weight: 500;
 }
 
 /* Popup */
 
-.popupParent{
+.popupParent {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -469,34 +479,34 @@ body {
     z-index: 11;
 }
 
-.popup{
+.popup {
     position: absolute;
     background-color: var(--white);
     border-radius: 40px;
     padding: 53px 150px;
     top: 50vh;
     left: 50vw;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.popupCloseBtn{
+.popupCloseBtn {
     position: absolute;
     top: 53px;
     right: 60px;
     cursor: pointer;
 }
 
-.popup .title{
+.popup .title {
     font-size: 36px;
     font-weight: 700;
     color: #000;
 }
 
-.popup .subtitle{
+.popup .subtitle {
     font-size: 18px;
     line-height: 26px;
     margin-top: 24px;
@@ -504,11 +514,75 @@ body {
     color: var(--gray);
 }
 
-.popup button{
+.popup button {
     width: 300px;
 }
 
-.customerInput{
+.customerInput {
     margin-top: 96px;
     width: 300px;
 }
+
+/* Profile */
+
+#profileBtn {
+    display: flex;
+    gap: 8px;
+}
+
+.tabPages {
+    height: 46px;
+    margin-top: 24px;
+    border-bottom: 1px solid;
+    color: var(--lightGray);
+    display: flex;
+}
+
+.tabPages .tab{
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 500;
+    height: 32px;
+    cursor: pointer;
+}
+
+.tabPages .tab.active{
+    color: var(--blue);
+    border-bottom: 2px solid var(--blue);
+}
+
+.tabPages .extraNarrowContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.profileForm .narrowContainer{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profileForm .title{
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.profileForm .narrowContainer button{
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    padding: 14px 16px;
+}
+
+.profileForm .narrowContainer img{
+    width: 24px;
+    height: 24px;
+}
+
+#logoutBtn{
+    color: var(--red);
+}
+
