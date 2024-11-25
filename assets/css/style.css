@@ -9,7 +9,7 @@
     --white: #fff;
     --cardGray: #F0F2F8;
     --red: #F34141;
-    --lightGreen:#EEF8F3;
+    --lightGreen: #EEF8F3;
     --green: #53B483;
 
 
@@ -187,6 +187,29 @@ body {
 
 .dropdown-options li:hover {
     background-color: #f0f0f0;
+}
+@media only screen and (max-width: 1200px) {
+    .narrowContainer {
+        width: 72% !important;
+        margin: 0 auto;
+    }
+    
+    .extraNarrowContainer {
+        width: 60% !important;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .narrowContainer {
+        width: 85% !important;
+        margin: 0 auto;
+    }
+    
+    .extraNarrowContainer {
+        width: 75% !important;
+        margin: 0 auto;
+    }
 }
 
 
@@ -366,12 +389,12 @@ body {
     line-height: 30px;
 }
 
-.infoContainer .col-6:last-child {
+.infoContainer .col-lg-6:last-child {
     display: flex;
     justify-content: end;
 }
 
-.infoContainer .col-6:last-child .card {
+.infoContainer .col-lg-6:last-child .card {
     flex: none;
 }
 
@@ -541,7 +564,7 @@ body {
 
 /* Popup */
 
-.popupParent { 
+.popupParent {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -565,7 +588,7 @@ body {
     text-align: center;
 }
 
-.popup.successs{
+.popup.successs {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
@@ -574,7 +597,7 @@ body {
     color: var(--green);
 }
 
-.popup.successs .content{
+.popup.successs .content {
     color: var(--green);
 }
 
@@ -675,25 +698,26 @@ body {
 
 /* Withdraw Section */
 
+.withdrawSection {
+    margin-top: 18px;
+}
+
 .withdrawSection .narrowContainer {
     display: flex;
     flex-wrap: wrap;
-    padding: 24px 0;
+    padding: 6px 0;
 }
 
-.withdrawSection .narrowContainer .col-6:nth-child(even) {
+.withdrawSection .narrowContainer .col-lg-6:nth-child(even) {
     padding-left: 6px;
-    margin-bottom: 24px;
 }
 
-.withdrawSection .narrowContainer .col-6:nth-child(odd) {
+.withdrawSection .narrowContainer .col-lg-6:nth-child(odd) {
     padding-right: 6px;
-    margin-bottom: 24px;
-
 }
 
 .withdrawCard {
-    border: 1px solid var(--lightGray); 
+    border: 1px solid var(--lightGray);
     border-radius: 8px;
     padding: 16px 32px;
     display: flex;
@@ -701,65 +725,76 @@ body {
     align-items: center;
 }
 
-.withdrawCard .title{
-     font-size: 14px;
-     font-weight: 400;
-     color: var(--midGray);
+.withdrawCard .title {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--midGray);
 }
 
-.withdrawCard .info{
+.withdrawCard .info {
     font-weight: 500;
     font-size: 16px;
     color: var(--darkGray);
 }
 
-.historyBtn{
+.narrowContainer.top>.col-lg-6 {
+    display: flex;
+    flex: 1;
+}
+
+.withdrawSection .narrowContainer .withdrawCard {
+    flex: 1;
+}
+
+.historyBtn {
     cursor: pointer;
     color: #E9A23B;
     font-size: 16px;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
-.addAddressBtn{
+.addAddressBtn {
     cursor: pointer;
     color: var(--blue);
     font-size: 16px;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
-.col-12 .withdrawCard{
+.col-12 .withdrawCard {
     padding: 32px 32px;
-    
+
 }
 
-.col-12 .withdrawCard input{
+.col-12 .withdrawCard input {
     border: none;
     outline: none;
     font-size: 32px;
     color: var(--darkGray);
+    width: 100%;
 }
 
 .col-12 .withdrawCard input::-webkit-inner-spin-button,
-.col-12 .withdrawCard input::-webkit-outer-spin-button{
+.col-12 .withdrawCard input::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
-.withdrawSection .narrowContainer .col-12{
+.withdrawSection .narrowContainer .col-12 {
     margin-bottom: 12px;
 }
 
-.withdrawSection .narrowContainer .tag{
+.withdrawSection .narrowContainer .tag {
     border: 1px solid var(--lightGray);
     border-radius: 8px;
     padding: 10px 16px;
     color: var(--darkGray);
 }
 
-.bigCards{
+.bigCards {
+    height: 294px;
     position: relative;
 }
 
-.circle{
+.circle {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -768,24 +803,91 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -63%);
+    transform: translate(-50%, -63%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.refresh{
+
+.refresh {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -78%);
+    transform: translate(-50%, -78%);
 }
 
-.whiteLine{
+.whiteLine {
     background-color: var(--white);
     width: 60px;
     height: 12px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -100%);
+    transform: translate(-50%, -100%);
+}
+
+@media only screen and (max-width: 1500px) {
+    .withdrawCard {
+        display: block;
+        text-align: center;
+    }
+
+    .bigCards .withdrawCard {
+        display: flex;
+        text-align: start;
+    }
+
+    .addAddressBtn,
+    .historyBtn {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .withdrawSection {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .narrowContainer.top{
+        flex-direction: column;
+    }
+
+    .circle, .whiteLine{
+        top: 22%;
+        left: 50%;
+        transform: translate(-45%, -50%);
+    }
+    .refresh{
+        top: 22%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+    }
+
+    .narrowContainer:last-of-type {
+        flex: 1;
+    }
+
+    .col-12 .withdrawCard input {
+        font-size: 16px;
+    }
+
+    .bigCards .withdrawCard {
+        padding: 6px 16px;
+    }
+
+    .withdrawBtn {
+        align-items: end;
+    }
+
+    #withdrawBtn {
+        width: 100%;
+        height: 50px;
+    }
 }
