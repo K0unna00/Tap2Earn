@@ -85,9 +85,17 @@
                 <label for="name">Email</label>
             </div>
 
-            <div id="countrySelectionInput" class="mainInput">
-                <input type="text" required="" autocomplete="off">
-                <label for="name">Country</label>
+            <div class="custom-select">
+                <div class="selected-option">
+                    <span id="selected-text">Select a country</span>
+                </div>
+                <ul class="dropdown-options">
+                    <li data-value="1" data-image="image1.jpg">
+                        <img src="./assets/images/azerbaijan.svg" alt="Option 1" />
+                        Azerbaijan
+                    </li>
+
+                </ul>
             </div>
 
         </div>
@@ -110,28 +118,76 @@
         </div>
     </section>
 
-    <section id="withdrawSection" class="withdrawSection">
+    <section id="withdrawSection" class="withdrawSection d-none">
         <div class="narrowContainer">
             <div class="col-6">
                 <div class="withdrawCard">
-
+                    <div>
+                        <div class="title">
+                            Total available balance:
+                        </div>
+                        <div class="info">
+                            35678 TapCoin
+                        </div>
+                    </div>
+                    <div class="historyBtn">
+                        View transaction history
+                    </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="withdrawCard">
-                    
+                    <div>
+                        <div class="title">
+                            USDT address:
+                        </div>
+                        <div class="info">
+                            You haven't added a USDT address yet.
+                        </div>
+                    </div>
+                    <div class="addAddressBtn">
+                        Add address
+                    </div>
                 </div>
             </div>
-            <div class="col-12">
-                <div class="withdrawCard">
+            <div class="bigCards col-12">
+                <div class="col-12">
+                    <div class="withdrawCard">
+                        <div>
+                            <div class="title">
+                                from
+                            </div>
+                            <input type="number" value="2000" />
+                        </div>
+                        <div class="tag">
+                            Tapcoin
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="withdrawCard">
+                        <div>
+                            <div class="title">
+                                Total available balance:
+                            </div>
+                            <input type="number" value="35892" />
+                        </div>
+                        <div class="tag">
+                            USDT
+                        </div>
+                    </div>
+                </div>
+                <div class="circle">
+                </div>
+                <div class="whiteLine">
                     
                 </div>
-            </div>
-            <div class="col-12">
-                <div class="withdrawCard">
-                    
+                <div class="refresh">
+                    <img src="./assets/images/refresh.svg" alt="">
                 </div>
+                
             </div>
+
         </div>
     </section>
 </body>

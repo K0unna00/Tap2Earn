@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const accordionHeaders = document.querySelectorAll(".accordion-header");
-  const loginBtn = document.getElementById("loginBtn");
   const profileBtn = document.getElementById("profileBtn");
   const homeBtn = document.getElementById("homeBtn");
 
@@ -18,9 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  loginBtn.addEventListener("click", () => {
-    loginPopup.classList.toggle("d-none");
-  });
+
 
   profileBtn.addEventListener("click", function () {
     window.location.href = "profile.html";

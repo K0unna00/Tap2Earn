@@ -3,6 +3,8 @@
 :root {
     --gray: #8D8A95;
     --lightGray: #ECEBEC;
+    --midGray: #C1C0C2;
+    --darkGray: #515151;
     --blue: #697FB4;
     --white: #fff;
     --cardGray: #F0F2F8;
@@ -31,7 +33,7 @@ body {
     margin: 0 auto;
 }
 
-.extraNarrowContainer{
+.extraNarrowContainer {
     width: 50% !important;
     margin: 0 auto;
 }
@@ -110,11 +112,66 @@ body {
 }
 
 .mainInput :is(input:focus, input:valid)~label {
-    transform: translateY(-18%) scale(.8    );
+    transform: translateY(-18%) scale(.8);
     margin: 0em;
     margin-left: 0.3em;
     padding: 0.4em;
     border-radius: 10px;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 0.8em;
+    padding-top: 1em;
+    border: 1px solid var(--lightGray);
+    border-radius: 10px;
+    color: #0000004D
+}
+
+.selected-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 20px;
+}
+
+.selected-option img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid var(--lightGray);
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.dropdown-options li {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-options li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.dropdown-options li:hover {
+    background-color: #f0f0f0;
 }
 
 
@@ -520,6 +577,7 @@ body {
 
 .customerInput {
     margin-top: 96px;
+    margin-bottom: 48px;
     width: 300px;
 }
 
@@ -538,7 +596,7 @@ body {
     display: flex;
 }
 
-.tabPages .tab{
+.tabPages .tab {
     color: var(--gray);
     font-size: 14px;
     font-weight: 500;
@@ -546,43 +604,159 @@ body {
     cursor: pointer;
 }
 
-.tabPages .tab.active{
+.tabPages .tab.active {
     color: var(--blue);
     border-bottom: 2px solid var(--blue);
 }
 
-.tabPages .extraNarrowContainer{
+.tabPages .extraNarrowContainer {
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
 
-.profileForm .narrowContainer{
+.profileForm .narrowContainer {
     margin-top: 36px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.profileForm .title{
+.profileForm .title {
     font-weight: 500;
     font-size: 14px;
     color: var(--gray);
 }
 
-.profileForm .narrowContainer button{
+.profileForm .narrowContainer button {
     width: 100%;
     display: flex;
     gap: 8px;
     padding: 14px 16px;
 }
 
-.profileForm .narrowContainer img{
+.profileForm .narrowContainer img {
     width: 24px;
     height: 24px;
 }
 
-#logoutBtn{
+#logoutBtn {
     color: var(--red);
 }
 
+
+/* Withdraw Section */
+
+.withdrawSection .narrowContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0;
+}
+
+.withdrawSection .narrowContainer .col-6:nth-child(even) {
+    padding-left: 6px;
+    margin-bottom: 24px;
+}
+
+.withdrawSection .narrowContainer .col-6:nth-child(odd) {
+    padding-right: 6px;
+    margin-bottom: 24px;
+
+}
+
+.withdrawCard {
+    border: 1px solid var(--lightGray); 
+    border-radius: 8px;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.withdrawCard .title{
+     font-size: 14px;
+     font-weight: 400;
+     color: var(--midGray);
+}
+
+.withdrawCard .info{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--darkGray);
+}
+
+.historyBtn{
+    cursor: pointer;
+    color: #E9A23B;
+    font-size: 16px;
+    font-weight: 400; 
+}
+
+.addAddressBtn{
+    cursor: pointer;
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 400; 
+}
+
+.col-12 .withdrawCard{
+    padding: 32px 32px;
+    
+}
+
+.col-12 .withdrawCard input{
+    border: none;
+    outline: none;
+    font-size: 32px;
+    color: var(--darkGray);
+}
+
+.col-12 .withdrawCard input::-webkit-inner-spin-button,
+.col-12 .withdrawCard input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+.withdrawSection .narrowContainer .col-12{
+    margin-bottom: 12px;
+}
+
+.withdrawSection .narrowContainer .tag{
+    border: 1px solid var(--lightGray);
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.bigCards{
+    position: relative;
+}
+
+.circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 1px solid var(--lightGray);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.refresh{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -78%);
+}
+
+.whiteLine{
+    background-color: var(--white);
+    width: 60px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -100%);
+}
