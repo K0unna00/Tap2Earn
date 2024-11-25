@@ -9,6 +9,9 @@
     --white: #fff;
     --cardGray: #F0F2F8;
     --red: #F34141;
+    --lightGreen:#EEF8F3;
+    --green: #53B483;
+
 
     --btnRadius: 12px;
 }
@@ -61,6 +64,18 @@ body {
 .grayBtn {
     border: 1px solid var(--lightGray);
     color: var(--gray);
+}
+
+.darkGrayBtn {
+    border: 1px solid var(--darkGray);
+    background-color: var(--darkGray);
+    color: var(--white);
+}
+
+.darkGrayBtn.disable {
+    border: 1px solid var(--lightGray);
+    background-color: var(--lightGray);
+    color: var(--white);
 }
 
 .blueBorderBtn {
@@ -526,7 +541,7 @@ body {
 
 /* Popup */
 
-.popupParent {
+.popupParent { 
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -548,6 +563,19 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.popup.successs{
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--lightGreen);
+    color: var(--green);
+}
+
+.popup.successs .content{
+    color: var(--green);
 }
 
 .popupCloseBtn {
@@ -724,6 +752,7 @@ body {
     border: 1px solid var(--lightGray);
     border-radius: 8px;
     padding: 10px 16px;
+    color: var(--darkGray);
 }
 
 .bigCards{

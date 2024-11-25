@@ -69,22 +69,18 @@
             <div class="title">
                 Personal information
             </div>
-
             <div id="fullNameInput" class="mainInput">
                 <input type="text" required="" autocomplete="off">
                 <label for="name">Full name</label>
             </div>
-
             <div id="usernameInput" class="mainInput">
                 <input type="text" required="" autocomplete="off">
                 <label for="name">Username</label>
             </div>
-
             <div id="emailInput" class="mainInput">
                 <input type="text" required="" autocomplete="off">
                 <label for="name">Email</label>
             </div>
-
             <div class="custom-select">
                 <div class="selected-option">
                     <span id="selected-text">Select a country</span>
@@ -97,24 +93,20 @@
 
                 </ul>
             </div>
-
         </div>
 
         <div class="narrowContainer">
             <div class="title">
                 Account settings
             </div>
-
             <button id="closeAccountBtn" class="mainBtn grayBtn">
                 <img src="./assets/images/closePopupIcon.svg" alt="close">
                 Close account
             </button>
-
             <button id="logoutBtn" class="mainBtn grayBtn">
                 <img src="./assets/images/logout.svg" alt="logout" class="me-2">
                 Logout
             </button>
-
         </div>
     </section>
 
@@ -130,7 +122,7 @@
                             35678 TapCoin
                         </div>
                     </div>
-                    <div class="historyBtn">
+                    <div id="historyBtn" class="historyBtn">
                         View transaction history
                     </div>
                 </div>
@@ -145,8 +137,8 @@
                             You haven't added a USDT address yet.
                         </div>
                     </div>
-                    <div class="addAddressBtn">
-                        Add address
+                    <div id="addAddressBtn" class="addAddressBtn">
+                        Add address <!--Burda state-e gore 'add'-i 'change' edersen -->
                     </div>
                 </div>
             </div>
@@ -168,7 +160,7 @@
                     <div class="withdrawCard">
                         <div>
                             <div class="title">
-                                Total available balance:
+                                To
                             </div>
                             <input type="number" value="35892" />
                         </div>
@@ -180,16 +172,62 @@
                 <div class="circle">
                 </div>
                 <div class="whiteLine">
-                    
+
                 </div>
                 <div class="refresh">
                     <img src="./assets/images/refresh.svg" alt="">
                 </div>
-                
-            </div>
 
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <button id="withdrawBtn" class="mainBtn darkGrayBtn">
+                    Withdraw to USDT
+                </button>
+
+                <!-- Disable button -->
+                <!-- <button id="withdrawBtn" class="mainBtn darkGrayBtn disable">
+                    Withdraw to USDT
+                </button> -->
+            </div>
         </div>
     </section>
+
+    <!-- Popups -->
+
+    <div id="addressPopupParent" class="addressPopupParent popupParent d-none">
+        <div class="popup">
+            <div class="title">
+                Add your USDT address <!--Burda da state-e gore 'add'-i 'change' edersen -->
+            </div>
+            <div class="subtitle">
+                Add your USDT address to transfer your TapCoins securely to your wallet. Ensure the address is correct
+                to prevent any issues, as transactions cannot be reversed.
+            </div>
+            <div id="customerId" class="mainInput customerInput">
+                <input type="text" required="" autocomplete="off">
+                <label for="name">USDT address</label>
+            </div>
+            <button id="confirmAddressBtn" class="mainBtn blueBtn">
+                Add address <!--Burda da state-e gore 'add'-i 'change' edersen --> 
+            </button>
+            <div id="addressPopupCloseBtn" class="addressPopupCloseBtn popupCloseBtn">
+                <img src="./assets/images/closePopupIcon.svg" alt="">
+            </div>
+        </div> 
+    </div>
+
+    <div id="addressSuccessPopupParent" class="addressSuccessPopupParent popupParent d-none">
+        <div class="popup successs">
+            <div class="content">
+                You have successfully added your USDT address. You can update this address anytime from the 'Withdraw
+                Balance' section. <!--Burda da state-e gore 'added'-i 'changed' edersen -->
+            </div>
+            <div id="addressSuccesssPopupCloseBtn" class="addressSuccesssPopupCloseBtn popupCloseBtn">
+                <img src="./assets/images/closePopupIcon.svg" alt="">
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
