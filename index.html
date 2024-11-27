@@ -22,10 +22,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <title>Tap2Earn</title>
 
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/popup.js" ></script>
+    <script src="./assets/js/popup.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
 <body id="body">
@@ -44,7 +47,7 @@
                 <div class="loginActions">
                     <button class="mainBtn blueBtn">Contact us</button>
                     <button id="loginBtn" class="mainBtn grayBorderBtn">Login</button>
-                    <button id="profileBtn" class="mainBtn grayBorderBtn" >
+                    <button id="profileBtn" class="mainBtn grayBorderBtn">
                         <img src="./assets/images/profilePhoto.svg" alt="PP">
                         Joel Rivers
                     </button>
@@ -54,7 +57,7 @@
     </section>
 
     <section id="hero" class="hero">
-        <div class="narrowContainer">
+        <div class="narrowContainer" data-aos="fade-right" data-aos-duration="1000">
             <div class="title">
                 Tap2Earn - <br>
                 Where Your Taps <br>
@@ -72,22 +75,22 @@
             </button>
         </div>
 
-        <img src="./assets/images/hero.svg" alt="" class="heroImg">
+        <img src="./assets/images/hero.svg" alt="" class="heroImg" data-aos="fade-left" data-aos-duration="2000">
     </section>
 
     <section id="about" class="about">
         <div class="narrowContainer aboutContainer">
-            <div class="title col-12">
+            <div class="title col-12" data-aos="fade-right" data-aos-duration="1000">
                 About Tap2Earn
             </div>
-            <div class="subtitle col-12">
+            <div class="subtitle col-12" data-aos="fade-left" data-aos-duration="1000">
                 At Tap2Earn, every tap brings you closer to rewards, with the opportunity to earn 1 USDT for every 1000
                 clicks. Invite your friends to join Tap2Earn and multiply your earnings. Your earned USDT rewards are
                 securely stored in your account, ready to be redeemed whenever you choose. Start tapping, start earning,
                 and start sharing the benefits with your network today!
             </div>
 
-            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 pe-3 py-3">
+            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 pe-3 py-3" data-aos="fade-right" data-aos-duration="1000">
                 <div class="card rounded">
                     <div class="top">
                         <img src="./assets/images/card1.svg" alt="">
@@ -100,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 ps-3 py-3">
+            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 ps-3 py-3" data-aos="fade-left" data-aos-duration="1000">
                 <div class="card rounded">
                     <div class="top">
                         <div class="title">Refer and Reap Rewards!</div>
@@ -113,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 pe-3 py-3">
+            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 pe-3 py-3" data-aos="fade-right" data-aos-duration="1000">
                 <div class="card rounded">
                     <div class="top">
                         <img src="./assets/images/card3.svg" alt="">
@@ -126,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 ps-3 py-3">
+            <div class="cardContainer col-xl-6 col-md-12 col-sm-12 ps-3 py-3" data-aos="fade-left" data-aos-duration="1000">
                 <div class="card rounded">
                     <div class="top">
                         <div class="title">Complete Missions, Boost Rewards!</div>
@@ -282,8 +285,8 @@
             <div class="narrowContainer contactContainer">
                 <div class="col-3 left">
                     <div class="title">Contact to Support</div>
-                    <div class="subtitle">Got a question about our app? 
-                        Chat directly with our 
+                    <div class="subtitle">Got a question about our app?
+                        Chat directly with our
                         Telegram bot for quick
                         answers!</div>
                     <button class="mainBtn blueBorderBtn">
@@ -347,8 +350,8 @@
                 efficient experience.
             </div>
             <div id="customerId" class="mainInput customerInput">
-                    <input type="text" required="" autocomplete="off">
-                    <label for="name">Customer ID</label>
+                <input type="text" required="" autocomplete="off">
+                <label for="name">Customer ID</label>
             </div>
 
             <button class="mainBtn blueBtn">
@@ -361,6 +364,10 @@
             </div>
         </div>
     </div>
+
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
