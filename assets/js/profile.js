@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
     selected.addEventListener('click', () => {
         options.style.display = options.style.display === 'block' ? 'none' : 'block';
     });
+
     document.querySelectorAll('.dropdown-options li').forEach((item) => {
         item.addEventListener('click', () => {
             selected.innerHTML = item.innerHTML;
             options.style.display = 'none';
         });
     });
-
 
     addAddressBtn.addEventListener("click", () => {
         addressPopup.classList.toggle("d-none");
@@ -54,5 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
     addressSuccesssPopupCloseBtn.addEventListener("click", () => {
         addressSuccessPopup.classList.toggle("d-none");
     });
+
+   
 });
 
+function ViewHistory(){
+    window.location.href = "transactionHistory.html";
+}

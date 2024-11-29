@@ -891,3 +891,77 @@ body {
         height: 50px;
     }
 }
+
+/* Transaction History */
+.history{
+    margin-top: 24px;
+}
+
+.dailyCard{
+    margin-top: 24px;
+}
+
+.history .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.history .top .left{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.dailyCard .date, .dailyCard .time{
+    font-size: 12px;
+    color: var(--midGray);
+}
+
+.historyRow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.historyRow .name{
+    color: var(--darkGray);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.historyRow .transaction{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--darkGray);
+}
+
+.historyRow .left{
+    display: flex;
+    gap: 5px;
+}
+
+.historyRow .right{
+    text-align: end;
+}
+
+.historyRow .right .status{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.historyRow{
+    padding: 17px 0;
+}
+
+.historyRow .accepted{
+    color: #697FB4;
+}
+.historyRow .pending{
+    color: #E9A23B;
+}
+.historyRow .rejected{
+    color: #F34141;
+}
+
+
