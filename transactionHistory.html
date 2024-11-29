@@ -26,6 +26,7 @@
     <title>Tap2Earn</title>
 
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/transactionHistory.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
@@ -59,7 +60,7 @@
         <div class="narrowContainer">
             <div class="top">
                 <div class="left">
-                    <div class="goBackBtn">
+                    <div id="goBackBtn" class="goBackBtn" onclick="goBackBtnClick()">
                         <img src="./assets/images/goBackIcon.svg" alt="goBack">
                     </div>
                     <div class="title">
@@ -67,7 +68,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <div class="filterBtn">
+                    <div id="filterBtn" class="filterBtn">
                         <img src="./assets/images/sort.svg" alt="sort">
                     </div>
                 </div>
@@ -141,6 +142,44 @@
         </div>
 
     </section>
+
+
+
+    
+    <div id="filterPopupParent" class="filterPopupParent popupParent d-none">
+        <div class="popup">
+            <div class="title">
+                Filter Transaction History
+            </div>
+
+            <div class="filterSection w-100">
+                <div class="w-100 d-flex justify-content-between">
+                    <p>Choose date</p>
+                    <p> <strong> Clear</strong></p>
+                </div>
+            </div>
+
+            <div class="w-100 inputs d-flex justify-content-between">
+                <div id="customerId" class="mainInput">
+                    <input type="text" required="" autocomplete="off">
+                    <label for="name">Customer ID</label>
+                </div>
+
+                <div id="customerId" class="mainInput">
+                    <input type="text" required="" autocomplete="off">
+                    <label for="name">Customer ID</label>
+                </div>
+            </div>
+
+            <button class="mainBtn blueBtn">
+                Apply filters
+            </button>
+
+            <div id="popupCloseBtn" class="popupCloseBtn">
+                <img src="./assets/images/closePopupIcon.svg" alt="">
+            </div>
+        </div>
+    </div>
 
 </body>
 

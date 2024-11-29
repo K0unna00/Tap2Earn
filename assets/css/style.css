@@ -914,6 +914,10 @@ body {
     font-weight: 500;
 }
 
+.goBackBtn, .filterBtn{
+    cursor: pointer;
+}
+
 .dailyCard .date, .dailyCard .time{
     font-size: 12px;
     color: var(--midGray);
@@ -957,11 +961,32 @@ body {
 .historyRow .accepted{
     color: #697FB4;
 }
+
 .historyRow .pending{
     color: #E9A23B;
 }
+
 .historyRow .rejected{
     color: #F34141;
 }
 
+.filterSection{
+    margin-top: 70px;
+}
+
+.filterPopupParent  .mainInput{
+    margin: 0;
+} 
+
+.filterPopupParent  .mainInput{
+    width: 49%;
+}
+
+.filterPopupParent .mainBtn{
+    margin-top: 48px;
+}
+
+.filterPopupParent .popup{
+    width: 55%;
+}
 
