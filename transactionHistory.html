@@ -145,7 +145,7 @@
 
 
 
-    
+
     <div id="filterPopupParent" class="filterPopupParent popupParent d-none">
         <div class="popup">
             <div class="title">
@@ -161,14 +161,19 @@
 
             <div class="w-100 inputs d-flex justify-content-between">
                 <div id="customerId" class="mainInput">
-                    <input type="text" required="" autocomplete="off">
-                    <label for="name">Customer ID</label>
+                    <input type="date" required="" autocomplete="off" placeholder="Start date">
                 </div>
 
                 <div id="customerId" class="mainInput">
-                    <input type="text" required="" autocomplete="off">
-                    <label for="name">Customer ID</label>
+                    <input type="date" required="" autocomplete="off" placeholder="End date">
                 </div>
+            </div>
+
+            <div>
+                <input type="radio" id="Earnings" name="fav_language" >
+                <label for="Earnings">Earnings</label><br>
+                <input type="radio" id="Withdrawals" name="fav_language" >
+                <label for="Withdrawals">Withdrawals</label><br>
             </div>
 
             <button class="mainBtn blueBtn">
